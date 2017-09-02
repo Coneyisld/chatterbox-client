@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>chatterbox</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
 
     <!-- dependencies -->
@@ -32,12 +34,12 @@
     <div class="spinner"><img src="images/spiffygif_46x46.gif"></div>
     <div id="rooms">
       Room:
-      <select id="roomSelect">
+      <select id="roomSelect" onChange="newDropDown()">
       </select>
     </div>
-    <form action="#" id="send" method="post">
+    <form action="javasript:alert('I am there')" id="send" method="post">
       <input type="text" name="message" id="message"/>
-      <input type="submit" name="submit" class="submit"/>
+      <input type="submit" name="submit" class="submit" value="submit" onclick="return getInput()"/>
     </form>
     <div id="chats"></div>
   </div>
